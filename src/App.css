@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.option-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row !important;
+}
+
+.option {
+  width: 300px; /* Adjust button width as needed */
+  height: 40px; /* Adjust button height as needed */
+  margin: 10px !important; /* Adjust the margin between buttons as needed */
+  font-size: medium !important;
+}
+
+.MuiCardHeader-title {
+  display: flex !important;
+  padding: 5px  0px;
+  font-size: 1.5rem !important;
+  font-weight: 300 !important;
+}
+
+.MuiCardHeader-action{
+  align-self: center !important;
+  padding: 5px;
+}
