@@ -3,30 +3,52 @@
   text-align: center;
   justify-content: center;
   height: 100vh;
+  /* background-image: url(https://img.staticmb.com/mbcontent/images/uploads/2023/10/diwali-celebration.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 .option-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row !important;
 }
 
 .option {
-  width: 300px; /* Adjust button width as needed */
-  height: 40px; /* Adjust button height as needed */
-  margin: 10px !important; /* Adjust the margin between buttons as needed */
+  width: 250px;
+  height: 40px;
+  margin: 10px !important;
   font-size: medium !important;
+  border: 3px solid #d1e5fa !important;
+  height: fit-content !important;
+  color: black !important;
+}
+
+.option:hover {
+  border: 3px solid #4295ed !important;
+  transition: none !important;
+  background-color: inherit !important;
 }
 
 .MuiCardHeader-title {
   display: flex !important;
-  padding: 5px  0px;
+  padding: 5px 0px;
   font-size: 1.5rem !important;
   font-weight: 300 !important;
 }
 
-.MuiCardHeader-action{
+.MuiCardHeader-action {
   align-self: center !important;
   padding: 5px;
+}
+
+.circleContainer {
+  /* justify-content: center; */
+  display: flex;
+}
+
+.circularBar {
+  width: 200px;
 }
