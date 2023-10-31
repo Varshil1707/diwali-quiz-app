@@ -1,14 +1,18 @@
-import { Card, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import React, { useState } from 'react'
 import '../App.css'
 import CircularScoreboard from './CircularScoreBoard'
 import QuizContent from './QuizContent'
 import { quizeQuestions } from './quizQuestions'
+import StarterPage from './StarterPage'
+
 
 const Quiz = () => {
+    const [quizStarted, setQuizStarted] = useState(false)
     const [activeQuestion, setActiveQuestion] = useState(0)
     const [selectedOption, setSelectedOption] = useState({ selectedOptionName: "", selectedOptionCondition: false })
-    const [correctAnswer, setCorrectAnswer] = useState(0) 
+    const [correctAnswer, setCorrectAnswer] = useState(0)
+
 
     const handleNextClick = (e) => {
         if (activeQuestion !== 9) {
@@ -24,13 +28,14 @@ const Quiz = () => {
 
     return (
         <Stack sx={{ display: "flex", textAlign: "center", justifyContent: "center" }} >
-            <Card sx={{ maxWidth: 700, width: "750px" }} elevation={3} >
-                {activeQuestion !== 9 ?
-                    <QuizContent selectedOption={selectedOption} activeQuestion={activeQuestion} setSelectedOption={setSelectedOption} handleNextClick={handleNextClick}  /> :
-                    <CircularScoreboard value={correctAnswer} />
-                }
+            {!quizStarted ? <StarterPage setQuizStarted={setQuizStarted} /> :
+                <>
+                    {activeQuestion !== 9 ?
+                        <QuizContent selectedOption={selectedOption} activeQuestion={activeQuestion} setSelectedOption={setSelectedOption} handleNextClick={handleNextClick} /> :
+                        <CircularScoreboard value={correctAnswer} />
+                    }
+                </>}
 
-            </Card>
         </Stack>
     )
 }

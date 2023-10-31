@@ -3,10 +3,14 @@
   text-align: center;
   justify-content: center;
   height: 100vh;
-  /* background-image: url(https://img.staticmb.com/mbcontent/images/uploads/2023/10/diwali-celebration.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background-image: linear-gradient(
+    to right top,
+    #800080,
+    #a93a8b,
+    #cb669a,
+    #e793af,
+    #ffc0cb
+  );
 }
 
 .option-container {
@@ -21,13 +25,13 @@
   height: 40px;
   margin: 10px !important;
   font-size: medium !important;
-  border: 3px solid #d1e5fa !important;
+  border: 3px solid #dd92be !important;
   height: fit-content !important;
   color: black !important;
 }
 
 .option:hover {
-  border: 3px solid #4295ed !important;
+  border: 3px solid #dc5aa5 !important;
   transition: none !important;
   background-color: inherit !important;
 }
@@ -45,10 +49,31 @@
 }
 
 .circleContainer {
-  /* justify-content: center; */
   display: flex;
 }
 
 .circularBar {
   width: 200px;
+  flex: 0.4;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.6;
+}
+
+.containedButton {
+  box-shadow: none !important;
+  background-color: #c05795 !important;
+  padding: 10px 10px !important;
+}
+
+.nextButton {
+  width: 250px !important;
+}
+
+.CircularProgressbar-text {
+  color: #4295ed;
 }
