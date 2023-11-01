@@ -11,8 +11,23 @@
     #e793af,
     #ffc0cb
   );
+
+  }
+.hello{
+  width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+.fireworks {
+  z-index: 1 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
 .option-container {
   display: flex;
   flex-wrap: wrap;

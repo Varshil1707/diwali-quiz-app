@@ -5,6 +5,7 @@ import CircularScoreboard from './CircularScoreBoard'
 import QuizContent from './QuizContent'
 import { quizeQuestions } from './quizQuestions'
 import StarterPage from './StarterPage'
+import Fireworks from '@fireworks-js/react'
 
 
 const Quiz = () => {
@@ -27,7 +28,8 @@ const Quiz = () => {
     }
 
     return (
-        <Stack sx={{ display: "flex", textAlign: "center", justifyContent: "center" }} >
+
+        <Stack sx={{ display: "flex", textAlign: "center", justifyContent: "center", zIndex : '999', position:"absolute"   }} >
             {!quizStarted ? <StarterPage setQuizStarted={setQuizStarted} /> :
                 <>
                     {activeQuestion !== 9 ?
@@ -37,6 +39,8 @@ const Quiz = () => {
                 </>}
 
         </Stack>
+
+
     )
 }
 

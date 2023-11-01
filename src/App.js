@@ -1,10 +1,15 @@
+import Fireworks from '@fireworks-js/react';
 import './App.css';
 import Quiz from './Component/Quiz';
 
 function App() {
+
   return (
     <div className='App'>
-      <Quiz />
+      <div className='hello' >
+        <Fireworks className='fireworks' options={{ mouse: { click: true, max: 5 } }} />
+        <Quiz />
+      </div>
     </div>
   );
 }

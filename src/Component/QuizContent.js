@@ -6,7 +6,7 @@ const QuizContent = ({ activeQuestion, setSelectedOption, handleNextClick, selec
 
     return (
         <>
-            <Card sx={{ maxWidth: 700, width: "750px" }} elevation={3} >
+            <Card sx={{ maxWidth: 700, width: "750px", background: 'rgba(255,255,255,0.5)' }} elevation={3} >
                 <CardHeader title={"All About Diwali Quiz"} action={`${activeQuestion + 1}/${quizeQuestions.length}`} sx={{ borderBottom: "1px solid black", fontWeight: "bolder" }} />
                 <CardContent>
                     <Typography variant="h4" color="text.secondary" sx={{ textAlign: "center", fontSize: "30px", fontWeight: '300 !important', color: "black" }}>
@@ -27,7 +27,7 @@ const QuizContent = ({ activeQuestion, setSelectedOption, handleNextClick, selec
                         ))}
                     </Stack>
 
-                    {selectedOption.selectedOptionCondition && <Stack sx={{alignItems : "center"}}>
+                    {selectedOption.selectedOptionCondition && <Stack sx={{ alignItems: "center" }}>
                         <Button onClick={handleNextClick} className='containedButton nextButton' variant='contained'  >Next</Button>
                     </Stack>}
 
