@@ -18,7 +18,7 @@ const ProgressProvider = ({ valueStart, valueEnd, children }) => {
 const CircularScoreboard = ({ value }) => {
     const [valueEnd, setValueEnd] = React.useState(value);
     return (
-        <Card sx={{ maxWidth: 700, width: "650px" }} elevation={3} >
+        <Card sx={{ maxWidth: 700, width: "650px",background: 'rgba(255,255,255,0.5)'  }} elevation={3} >
             <CardContent  >
                 <Example label="Initial animation upon mount with ProgressProvider wrapper">
                     <ProgressProvider valueStart={10} valueEnd={valueEnd}>

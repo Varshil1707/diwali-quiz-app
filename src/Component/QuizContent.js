@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, CardHeader, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { quizeQuestions } from './quizQuestions'
+import Btn from './Btn'
 
 const QuizContent = ({ activeQuestion, setSelectedOption, handleNextClick, selectedOption }) => {
 
@@ -15,20 +16,22 @@ const QuizContent = ({ activeQuestion, setSelectedOption, handleNextClick, selec
 
                 </CardContent>
 
-                <CardContent>
+                <CardContent sx={{display : "flex", justifyContent : "center", flexDirection : "column", alignItems : "center"}} >
                     <Stack className='option-container' >
                         {quizeQuestions[activeQuestion].options.map((item, index) => (
-                            <Button className='option' size='large' key={index} variant='outlined'
-                                sx={{ background: selectedOption.selectedOptionName === item ? "#dd92be" : "", borderColor: selectedOption.selectedOptionName === item ? "#dd92be !important" : "", "&:hover": { backgroundColor: selectedOption.selectedOptionName === item ? "#dd92be!important" : "" } }}
+                            <Btn className='option' size='large' key={index} variant='outlined'
+                                style={{ background: selectedOption.selectedOptionName === item ? "#dd92be" : "", borderColor: selectedOption.selectedOptionName === item ? "#dd92be !important" : "", "&:hover": { backgroundColor: selectedOption.selectedOptionName === item ? "#dd92be!important" : "" } }}
                                 onClick={(e) => {
                                     setSelectedOption({ selectedOptionName: item, selectedOptionCondition: true })
                                 }}
-                            > {item} </Button>
+                                title={item}
+                            /> 
                         ))}
                     </Stack>
 
                     {selectedOption.selectedOptionCondition && <Stack sx={{ alignItems: "center" }}>
-                        <Button onClick={handleNextClick} className='containedButton nextButton' variant='contained'  >Next</Button>
+                        {/* <Button onClick={handleNextClick} className='containedButton nextButton' variant='contained'  >Next</Button> */}
+                        <Btn className="primaryBtn nextButton" onClick={handleNextClick} title="Next" />
                     </Stack>}
 
 
